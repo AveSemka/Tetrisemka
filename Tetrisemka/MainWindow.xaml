@@ -1,0 +1,17 @@
+﻿<Window x:Class="Tetrisemka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm ="clr-namespace:Tetrisemka.ViewModel"
+        xmlns:local="clr-namespace:Tetrisemka"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="459.153" Width="558.22">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    <Grid x:Name="test">
+        <Button Content="{Binding TestText}" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="89" Height="40" Command="{Binding StartCommand}"/>
+        <Image HorizontalAlignment="Left" RenderOptions.BitmapScalingMode="NearestNeighbor" Height="408" Margin="156,10,0,0" VerticalAlignment="Top" Width="384" Source="{Binding GameBoard}"/>
+    </Grid>
+</Window>
